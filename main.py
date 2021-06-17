@@ -5,9 +5,6 @@ import shell
 import io
 import threading
 
-import eventlet
-eventlet.monkey_patch()
-
 app = Flask(__name__)
 socketio = SocketIO(app)
 shell = shell.Shell(socketio, "../bin/pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell")
