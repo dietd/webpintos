@@ -6,7 +6,7 @@ from os import O_NONBLOCK
 import sys
 #from flask_socketio import SocketIO
 
-command = "../bin/pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell"
+command = "pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell"
 
 class Shell():
     def set_flags(self, pipe):
