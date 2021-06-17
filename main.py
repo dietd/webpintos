@@ -7,7 +7,7 @@ import threading
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-shell = shell.Shell(socketio, "bin/pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell")
+shell = shell.Shell(socketio, "pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell")
 
 @app.route('/')
 def home():
