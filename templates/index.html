@@ -1,0 +1,37 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+<!--<script type="text/javascript">
+
+$(document).ready(function() {
+	var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+	socket.on('send_output', function(msg) {
+		$('#shell_output').append(msg);
+		$('#shell_output').scrollTop($('#shell_output')[0].scrollHeight);
+	});
+
+	$('#shell_input').keypress(function(e) {
+		if (e.keyCode == '13') {
+			socket.emit('send_input', $('#shell_input').val());
+			$('#shell_input').val('');
+			return false;
+		}
+	});
+});
+
+</script>-->
+
+<script src="static/index.js"></script>
+
+<h1> Web Pintos </h1>
+
+
+<textarea id="shell_output" placeholder="Operating System Output" rows="20" cols="80" readOnly>
+</textarea>
+
+<form method="post">
+<p><input type="text" id="shell_input"/></p>
+</form>
+
+</html>

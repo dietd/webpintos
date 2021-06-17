@@ -1,0 +1,50 @@
+Copying tests/filesys/extended/cache-test-one to scratch partition...
+Copying tests/filesys/extended/tar to scratch partition...
+qemu-system-i386 -device isa-debug-exit -hda /tmp/k3dhaCed_j.dsk -hdb tmp.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading............
+Kernel command line: -q -f extract run cache-test-one
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  419,430,400 loops/s.
+hda: 1,008 sectors (504 kB), model "QM00001", serial "QEMU HARDDISK"
+hda1: 193 sectors (96 kB), Pintos OS kernel (20)
+hda2: 249 sectors (124 kB), Pintos scratch (22)
+hdb: 5,040 sectors (2 MB), model "QM00002", serial "QEMU HARDDISK"
+hdb1: 4,096 sectors (2 MB), Pintos file system (21)
+filesys: using hdb1
+scratch: using hda2
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch device into file system...
+Putting 'cache-test-one' into the file system...
+Putting 'tar' into the file system...
+Erasing ustar archive...
+Executing 'cache-test-one':
+(cache-test-one) begin
+(cache-test-one) Filling buffer
+(cache-test-one) Creating file.
+(cache-test-one) Opened file for write.
+(cache-test-one) Filling file
+(cache-test-one) Write finished. Closing file and flushing cache.
+(cache-test-one) Opened file for read.
+(cache-test-one) Reading file
+(cache-test-one) Read done
+(cache-test-one) Opened file for second read.
+(cache-test-one) Reading file
+(cache-test-one) Read done
+(cache-test-one) Hit rate increased on second read
+(cache-test-one) Hit rate one was: 69
+(cache-test-one) Hit rate the second time was: 85
+(cache-test-one) end
+cache-test-one: exit(0)
+Execution of 'cache-test-one' complete.
+Timer: 88 ticks
+Thread: 19 idle ticks, 65 kernel ticks, 4 user ticks
+hdb1 (filesys): 591 reads, 527 writes
+hda2 (scratch): 248 reads, 2 writes
+Console: 1568 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

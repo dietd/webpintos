@@ -1,0 +1,43 @@
+Copying tests/filesys/extended/cache-test-two to scratch partition...
+Copying tests/filesys/extended/tar to scratch partition...
+qemu-system-i386 -device isa-debug-exit -hda /tmp/4GQ175od5Y.dsk -hdb tmp.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading............
+Kernel command line: -q -f extract run cache-test-two
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  455,475,200 loops/s.
+hda: 1,008 sectors (504 kB), model "QM00001", serial "QEMU HARDDISK"
+hda1: 193 sectors (96 kB), Pintos OS kernel (20)
+hda2: 242 sectors (121 kB), Pintos scratch (22)
+hdb: 5,040 sectors (2 MB), model "QM00002", serial "QEMU HARDDISK"
+hdb1: 4,096 sectors (2 MB), Pintos file system (21)
+filesys: using hdb1
+scratch: using hda2
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch device into file system...
+Putting 'cache-test-two' into the file system...
+Putting 'tar' into the file system...
+Erasing ustar archive...
+Executing 'cache-test-two':
+(cache-test-two) begin
+(cache-test-two) Creating file.
+(cache-test-two) Opened file for write.
+(cache-test-two) writing 100KB (200 blocks)
+(cache-test-two) Filling file
+(cache-test-two) Write finished. Closing file and removing.
+(cache-test-two) Calls block_read 201 times
+(cache-test-two) Calls block_write 231 times
+(cache-test-two) end
+cache-test-two: exit(0)
+Execution of 'cache-test-two' complete.
+Timer: 88 ticks
+Thread: 18 idle ticks, 65 kernel ticks, 5 user ticks
+hdb1 (filesys): 736 reads, 694 writes
+hda2 (scratch): 241 reads, 2 writes
+Console: 1325 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

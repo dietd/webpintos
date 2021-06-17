@@ -1,0 +1,39 @@
+Copying tests/filesys/extended/dir-rmdir to scratch partition...
+Copying tests/filesys/extended/tar to scratch partition...
+qemu-system-i386 -device isa-debug-exit -hda /tmp/JRL0qa1vhb.dsk -hdb tmp.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading............
+Kernel command line: -q -f extract run dir-rmdir
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  475,955,200 loops/s.
+hda: 1,008 sectors (504 kB), model "QM00001", serial "QEMU HARDDISK"
+hda1: 193 sectors (96 kB), Pintos OS kernel (20)
+hda2: 239 sectors (119 kB), Pintos scratch (22)
+hdb: 5,040 sectors (2 MB), model "QM00002", serial "QEMU HARDDISK"
+hdb1: 4,096 sectors (2 MB), Pintos file system (21)
+filesys: using hdb1
+scratch: using hda2
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch device into file system...
+Putting 'dir-rmdir' into the file system...
+Putting 'tar' into the file system...
+Erasing ustar archive...
+Executing 'dir-rmdir':
+(dir-rmdir) begin
+(dir-rmdir) mkdir "a"
+(dir-rmdir) rmdir "a"
+(dir-rmdir) chdir "a" (must return false)
+(dir-rmdir) end
+dir-rmdir: exit(0)
+Execution of 'dir-rmdir' complete.
+Timer: 79 ticks
+Thread: 16 idle ticks, 62 kernel ticks, 1 user ticks
+hdb1 (filesys): 529 reads, 489 writes
+hda2 (scratch): 238 reads, 2 writes
+Console: 1081 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
