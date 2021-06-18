@@ -7,7 +7,7 @@ import threading
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-shell = shell.Shell(socketio, "pintos -v -k --qemu --disk cs162proj.dsk -- -q run shell")
+shell = shell.Shell(socketio, "pintos -v -k --bochs --disk cs162proj.dsk -- -q run shell")
 
 @app.route('/')
 def home():
@@ -29,4 +29,5 @@ def shell_input(msg, methods=['POST']):
     
 if __name__ == '__main__':
     shell.run()
+    #socketio.run(app, host='192.168.162.162', port=8000, debug=False)
     socketio.run(app, host='0.0.0.0', port=5000, debug=False)

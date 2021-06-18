@@ -1,17 +1,8 @@
-qemu
-qemu-block-extra
-qemu-slof
-qemu-system
-qemu-system-arm
-qemu-system-common
-qemu-system-mips
-qemu-system-misc
-qemu-system-ppc
-qemu-system-s390x
-qemu-system-sparc
-qemu-system-x86
-qemu-user
-qemu-user-binfmt
-qemu-utils
-qemubuilder
+bochs
+bochs-doc
+bochs-sdl
+bochs-term
+bochs-wx
+bochs-x
+bochsbios
 
