@@ -29,5 +29,5 @@ def shell_input(msg, methods=['POST']):
     
 if __name__ == '__main__':
     shell.run()
-    socketio.run(app, host='192.168.162.162', port=8000, debug=False)
-    #socketio.run(app, host='0.0.0.0', port=5000, debug=False)
+    #socketio.run(app, host='192.168.162.162', port=8000, debug=False)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=False)
