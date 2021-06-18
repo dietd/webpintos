@@ -1,2 +1,4 @@
 http://archive.ubuntu.com/ubuntu/pool/universe/b/bochs/bochs_2.6-5build2_amd64.deb
 libgtk2.0-0
+bochs-sdl
+bochs-x
