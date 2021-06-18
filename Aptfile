@@ -5,5 +5,5 @@ bochs-term
 bochs-wx
 bochs-x
 bochsbios
-pulseaudio
+libpulse-dev
 
