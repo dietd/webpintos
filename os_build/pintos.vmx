@@ -1,0 +1,23 @@
+#! /usr/bin/vmware -G
+config.version = 8
+guestOS = "linux"
+memsize = 4
+floppy0.present = FALSE
+usb.present = FALSE
+sound.present = FALSE
+gui.exitAtPowerOff = TRUE
+gui.exitOnCLIHLT = TRUE
+gui.powerOnAtStartUp = TRUE
+serial0.present = TRUE
+serial0.fileType = "pipe"
+serial0.fileName = "pintos.socket"
+serial0.pipe.endPoint = "client"
+serial0.tryNoRxLoss = "TRUE"
+
+ide0:0.present = TRUE
+ide0:0.deviceType = "plainDisk"
+ide0:0.fileName = "ide0:0.pln"
+
+ide0:1.present = TRUE
+ide0:1.deviceType = "plainDisk"
+ide0:1.fileName = "ide0:1.pln"

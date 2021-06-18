@@ -1,0 +1,16 @@
+version=1
+CID=1278119710
+parentCID=ffffffff
+createType="monolithicFlat"
+
+RW 10080 FLAT "cs162proj.dsk" 0
+
+# The Disk Data Base
+#DDB
+
+ddb.adapterType = "ide"
+ddb.virtualHWVersion = "4"
+ddb.toolsVersion = "2"
+ddb.geometry.cylinders = "10"
+ddb.geometry.heads = "16"
+ddb.geometry.sectors = "63"
