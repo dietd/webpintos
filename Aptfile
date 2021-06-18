@@ -13,4 +13,6 @@ qemu-system-x86
 qemu-user
 qemu-user-binfmt
 qemu-utils
+qemubuilder
+qemuctl
 
